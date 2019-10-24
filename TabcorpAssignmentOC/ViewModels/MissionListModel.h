@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "LaunchMission.h"
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, SortType) {
     SortByDate = 1,
@@ -41,6 +42,8 @@ typedef NS_ENUM(NSInteger, FilterType) {
 - (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath;
 
 - (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath;
+
+-(LaunchMission *)selectedMissionAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

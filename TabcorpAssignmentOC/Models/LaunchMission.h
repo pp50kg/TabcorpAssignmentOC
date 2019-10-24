@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Rocket.h"
-#import "Launched.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LaunchMission : NSObject

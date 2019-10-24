@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LaunchMission.h"
 #import "MissionListModel.h"
 
 @interface MissionListModel ()
@@ -193,14 +192,20 @@
     NSMutableArray *sectionItems = _resultList[indexPath.section];
     LaunchMission *mission = sectionItems[indexPath.row];
     
-    return mission.missionName;
+    return [NSString stringWithFormat:@"MissionName: %@",mission.missionName];
 }
 
 - (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *sectionItems = _resultList[indexPath.section];
     LaunchMission *mission = sectionItems[indexPath.row];
     
-    return mission.launchDate;
+    return [NSString stringWithFormat:@"LaunchDate: %@",mission.launchDate];
 }
 
+-(LaunchMission *)selectedMissionAtIndexPath:(NSIndexPath *)indexPath{
+   NSMutableArray *sectionItems = _resultList[indexPath.section];
+   LaunchMission *mission = sectionItems[indexPath.row];
+    
+    return mission;
+}
 @end

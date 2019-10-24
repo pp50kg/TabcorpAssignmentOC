@@ -60,6 +60,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LauncheDetailViewController *detailViewController = [LauncheDetailViewController new];
+    [detailViewController setLaunchMission:[listModel selectedMissionAtIndexPath:indexPath]];
     [self presentViewController:detailViewController animated:YES completion:nil];
 }
 

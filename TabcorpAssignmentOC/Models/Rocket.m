@@ -10,4 +10,18 @@
 
 @implementation Rocket
 
+- (instancetype)initWithDictionary:(NSDictionary *)tempDic {
+    self = [super init];
+    if (!self) return nil;
+    
+    _firstFlight = tempDic[@"first_flight"];
+    _country = tempDic[@"country"];
+    _company = tempDic[@"company"];
+    _rocketID = tempDic[@"rocket_id"];
+    _rocketType = tempDic[@"rocket_type"];
+    _wikipedia = tempDic[@"wikipedia"];
+    
+    return self;
+}
+
 @end

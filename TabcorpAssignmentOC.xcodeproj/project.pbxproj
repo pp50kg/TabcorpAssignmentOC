@@ -10,7 +10,6 @@
 		0E1BC57A2360827300648646 /* LauncheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5782360827300648646 /* LauncheDetailViewController.m */; };
 		0E1BC57B2360827300648646 /* LauncheDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BC5792360827300648646 /* LauncheDetailViewController.xib */; };
 		0E1BC587236084AD00648646 /* Rocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC586236084AD00648646 /* Rocket.m */; };
-		0E1BC58D23608B7900648646 /* Launched.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC58C23608B7900648646 /* Launched.m */; };
 		0E1BC59023613E0900648646 /* MissionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC58F23613E0900648646 /* MissionListModel.m */; };
 		0E1BC59323613E1A00648646 /* MissionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC59223613E1A00648646 /* MissionDetailModel.m */; };
 		0E1BC5972361467900648646 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5962361467900648646 /* NetworkingManager.m */; };
@@ -23,6 +22,7 @@
 		0EAB32EE236197DB00606BA1 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB32EC236197DB00606BA1 /* DetailCell.xib */; };
 		0EAB32F12361986400606BA1 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32F02361986400606BA1 /* HeaderView.m */; };
 		0EAB32F32361987300606BA1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB32F22361987300606BA1 /* HeaderView.xib */; };
+		0EAB32FB2361CFAE00606BA1 /* MissionDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32FA2361CFAE00606BA1 /* MissionDetailPresenter.m */; };
 		0EAB68EB23606575000F243D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68EA23606575000F243D /* AppDelegate.m */; };
 		0EAB68EE23606575000F243D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68ED23606575000F243D /* SceneDelegate.m */; };
 		0EAB68F123606575000F243D /* MissionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68F023606575000F243D /* MissionListViewController.m */; };
@@ -39,8 +39,6 @@
 		0E1BC5792360827300648646 /* LauncheDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LauncheDetailViewController.xib; sourceTree = "<group>"; };
 		0E1BC585236084AD00648646 /* Rocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rocket.h; sourceTree = "<group>"; };
 		0E1BC586236084AD00648646 /* Rocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rocket.m; sourceTree = "<group>"; };
-		0E1BC58B23608B7900648646 /* Launched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Launched.h; sourceTree = "<group>"; };
-		0E1BC58C23608B7900648646 /* Launched.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Launched.m; sourceTree = "<group>"; };
 		0E1BC58E23613E0900648646 /* MissionListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionListModel.h; sourceTree = "<group>"; };
 		0E1BC58F23613E0900648646 /* MissionListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionListModel.m; sourceTree = "<group>"; };
 		0E1BC59123613E1A00648646 /* MissionDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionDetailModel.h; sourceTree = "<group>"; };
@@ -63,6 +61,8 @@
 		0EAB32EF2361986400606BA1 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		0EAB32F02361986400606BA1 /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		0EAB32F22361987300606BA1 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		0EAB32F92361CFAE00606BA1 /* MissionDetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionDetailPresenter.h; sourceTree = "<group>"; };
+		0EAB32FA2361CFAE00606BA1 /* MissionDetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionDetailPresenter.m; sourceTree = "<group>"; };
 		0EAB68E623606575000F243D /* TabcorpAssignmentOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabcorpAssignmentOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAB68E923606575000F243D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EAB68EA23606575000F243D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +108,8 @@
 			children = (
 				0E1BC59D236150C700648646 /* MissionListPresenter.h */,
 				0E1BC59E236150C700648646 /* MissionListPresenter.m */,
+				0EAB32F92361CFAE00606BA1 /* MissionDetailPresenter.h */,
+				0EAB32FA2361CFAE00606BA1 /* MissionDetailPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -199,8 +201,6 @@
 				0EAB32E223616EDD00606BA1 /* LaunchMission.m */,
 				0E1BC585236084AD00648646 /* Rocket.h */,
 				0E1BC586236084AD00648646 /* Rocket.m */,
-				0E1BC58B23608B7900648646 /* Launched.h */,
-				0E1BC58C23608B7900648646 /* Launched.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAB32FB2361CFAE00606BA1 /* MissionDetailPresenter.m in Sources */,
 				0EAB68F123606575000F243D /* MissionListViewController.m in Sources */,
 				0EAB68EB23606575000F243D /* AppDelegate.m in Sources */,
 				0E1BC5972361467900648646 /* NetworkingManager.m in Sources */,
@@ -336,7 +337,6 @@
 				0EAB32F12361986400606BA1 /* HeaderView.m in Sources */,
 				0EAB32ED236197DB00606BA1 /* DetailCell.m in Sources */,
 				0E1BC59323613E1A00648646 /* MissionDetailModel.m in Sources */,
-				0E1BC58D23608B7900648646 /* Launched.m in Sources */,
 				0E1BC59F236150C700648646 /* MissionListPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

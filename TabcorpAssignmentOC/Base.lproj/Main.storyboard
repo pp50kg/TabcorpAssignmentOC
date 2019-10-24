@@ -43,7 +43,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjC-7x-Aak">
-                                        <rect key="frame" x="349" y="0.0" width="65" height="44"/>
+                                        <rect key="frame" x="339" y="0.0" width="65" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="aL8-SM-lML"/>
+                                        </constraints>
                                         <state key="normal" title="Filter"/>
                                         <connections>
                                             <action selector="filterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8A-aj-Ueo"/>
@@ -55,9 +58,8 @@
                                     <constraint firstItem="mjC-7x-Aak" firstAttribute="height" secondItem="3Md-dr-8ng" secondAttribute="height" id="EbV-HJ-IpQ"/>
                                     <constraint firstItem="wDj-lQ-NpV" firstAttribute="centerX" secondItem="3Md-dr-8ng" secondAttribute="centerX" id="LaB-Ls-ne8"/>
                                     <constraint firstAttribute="height" constant="44" id="Nng-Ag-7qc"/>
-                                    <constraint firstItem="mjC-7x-Aak" firstAttribute="leading" secondItem="wDj-lQ-NpV" secondAttribute="trailing" constant="121" id="THE-wB-3Jx"/>
                                     <constraint firstItem="mjC-7x-Aak" firstAttribute="centerY" secondItem="3Md-dr-8ng" secondAttribute="centerY" id="TOb-1P-K3v"/>
-                                    <constraint firstAttribute="trailing" secondItem="mjC-7x-Aak" secondAttribute="trailing" id="pSV-Rl-GtL"/>
+                                    <constraint firstAttribute="trailing" secondItem="mjC-7x-Aak" secondAttribute="trailing" constant="10" id="pSV-Rl-GtL"/>
                                     <constraint firstItem="wDj-lQ-NpV" firstAttribute="centerY" secondItem="3Md-dr-8ng" secondAttribute="centerY" id="rcV-YJ-LQ2"/>
                                 </constraints>
                             </view>
