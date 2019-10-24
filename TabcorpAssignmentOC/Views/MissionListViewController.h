@@ -10,6 +10,8 @@
 
 @interface MissionListViewController : UIViewController{
     __weak IBOutlet UITableView *tableView;
+    __weak IBOutlet UILabel *viewControllerTitleLabel;
+    __weak IBOutlet UISegmentedControl *segment;
 }
 
 

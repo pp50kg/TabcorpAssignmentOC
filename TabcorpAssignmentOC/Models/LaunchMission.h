@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *launchDate;
 @property (strong, nonatomic) NSString *launchUnix;
 @property (strong, nonatomic) NSString *rocketId;
+@property (assign, nonatomic) BOOL launchSuccess;
 
 @end
 

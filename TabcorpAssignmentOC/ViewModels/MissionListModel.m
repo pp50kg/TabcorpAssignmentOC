@@ -17,14 +17,23 @@
 
 @end
 
-@implementation MissionListModel
+@implementation MissionListModel{
+    NSMutableArray *allItems;
+    NSMutableArray *successItems;
+    NSMutableArray *failItems;
+}
 
 - (instancetype)initWithMissionList:(NSMutableArray *)missionList{
     self = [super init];
     if (!self) return nil;
 
     _missions = missionList;
-
+    allItems = [NSMutableArray new];
+    successItems = [NSMutableArray new];
+    failItems = [NSMutableArray new];
+    
+    [self filterArray];
+    
     return self;
 }
 
@@ -32,19 +41,19 @@
     return @"List";
 }
 
-- (NSMutableArray *)sortByType:(SortType)selectedType{
+- (NSMutableArray *)sortByType:(SortType)selectedType processArray:(NSMutableArray *)processArray{
     NSMutableArray *sortArray = [NSMutableArray new];
     _selectedSortType = selectedType;
     
     switch (selectedType) {
         case SortByDate:{
              NSMutableSet *dateSet = [NSMutableSet new];
-            for (LaunchMission *tempMission in _missions) {
+            for (LaunchMission *tempMission in processArray) {
                 [dateSet addObject:tempMission.launchYear];
             }
             for (NSString *launchYear in dateSet) {
                 NSMutableArray *yearGroup = [NSMutableArray new];
-                for (LaunchMission *tempMission in _missions) {
+                for (LaunchMission *tempMission in processArray) {
                     if ([tempMission.launchYear isEqualToString:launchYear]) {
                         [yearGroup addObject:tempMission];
                     }
@@ -71,14 +80,14 @@
             break;
         case SortByName:{
                  NSMutableSet *alphabetSet = [NSMutableSet new];
-            for (LaunchMission *tempMission in _missions) {
+            for (LaunchMission *tempMission in processArray) {
                 if (tempMission.missionName.length>0) {
                     [alphabetSet addObject:[tempMission.missionName substringToIndex:1]];
                 }
             }
             for (NSString *alphabet in alphabetSet) {
                 NSMutableArray *alphabetGroup = [NSMutableArray new];
-                for (LaunchMission *tempMission in _missions) {
+                for (LaunchMission *tempMission in processArray) {
                     if (tempMission.missionName.length>0) {
                         if ([alphabet isEqualToString:[tempMission.missionName substringToIndex:1]]) {
                             [alphabetGroup addObject:tempMission];
@@ -111,17 +120,55 @@
     return sortArray;
 }
 
+-(void) filterArray{
+    allItems = [NSMutableArray arrayWithArray:_missions];
+    
+    for (LaunchMission *tempMission in _missions) {
+        if (tempMission.launchSuccess) {
+            [successItems addObject:tempMission];
+        }
+    }
+    
+    for (LaunchMission *tempMission in _missions) {
+        if (!tempMission.launchSuccess) {
+            [failItems addObject:tempMission];
+        }
+    }
+}
+
+- (NSMutableArray *)filterByType:(FilterType)selectedType{
+    NSMutableArray *filterArray = [NSMutableArray new];
+    
+    switch (selectedType) {
+        case FilterType_All:{
+            filterArray = [self sortByType:_selectedSortType processArray:allItems];
+        }
+            break;
+        case FilterType_Success:{
+            filterArray = [self sortByType:_selectedSortType processArray:successItems];
+        }
+            break;
+        case FilterType_Fail:{
+            filterArray = [self sortByType:_selectedSortType processArray:failItems];
+        }
+            break;
+        default:
+            break;
+    }
+    return filterArray;
+}
+
 - (NSString *)sectionTitleInSection:(NSInteger)section{
     NSString *sectionTitle;
     switch (_selectedSortType) {
         case SortByDate:{
-            NSMutableArray *yearGroup = _sortList[section];
+            NSMutableArray *yearGroup = _resultList[section];
             LaunchMission *firstMission = [yearGroup firstObject];
             sectionTitle = firstMission.launchYear;
         }
             break;
         case SortByName:{
-            NSMutableArray *alphabetGroup = _sortList[section];
+            NSMutableArray *alphabetGroup = _resultList[section];
             LaunchMission *firstMission = [alphabetGroup firstObject];
             sectionTitle = [firstMission.missionName substringToIndex:1];
         }
@@ -133,23 +180,26 @@
 }
 
 - (NSUInteger)numberSection{
-    return _sortList.count;
+    return _resultList.count;
 }
 
 - (NSUInteger)numberOfMissionInSection:(NSInteger)section{
-    NSMutableArray *sectionItems = _sortList[section];
+    NSMutableArray *sectionItems = _resultList[section];
+    
     return sectionItems.count;
 }
 
 - (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath{
-    NSMutableArray *sectionItems = _sortList[indexPath.section];
+    NSMutableArray *sectionItems = _resultList[indexPath.section];
     LaunchMission *mission = sectionItems[indexPath.row];
+    
     return mission.missionName;
 }
 
 - (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath{
-    NSMutableArray *sectionItems = _sortList[indexPath.section];
+    NSMutableArray *sectionItems = _resultList[indexPath.section];
     LaunchMission *mission = sectionItems[indexPath.row];
+    
     return mission.launchDate;
 }
 

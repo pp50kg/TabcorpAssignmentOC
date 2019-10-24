@@ -23,7 +23,15 @@
     _launchUnix = tempDic[@"launch_date_unix"];
     NSDictionary *rocketInfo = tempDic[@"rocket"];
     _rocketId = rocketInfo[@"rocket_id"];
+    
+    _launchSuccess = NO;
 
+    id value = tempDic[@"launch_success"];
+    
+    if (![value isKindOfClass:[NSNull class]]) {
+        _launchSuccess = [value boolValue];
+    }
+    
     return self;
 }
 
