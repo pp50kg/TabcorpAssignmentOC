@@ -19,13 +19,8 @@
         NSLog(@"%@",responseObject);
         if ([responseObject isKindOfClass:[NSArray class]]){
             NSArray *responseArray = responseObject;
-            NSDictionary *correctDictionary;
-            for (NSDictionary *tempDic in responseArray) {
-                if ([[NSString stringWithFormat:@"%@",tempDic[@"flight_number"]]isEqualToString:flightNumber]) {
-                    correctDictionary = [NSDictionary dictionaryWithDictionary:tempDic];
-                }
-            }
-            LaunchMission *mission = [[LaunchMission alloc]initWithDictionary:correctDictionary];
+ 
+            LaunchMission *mission = [[LaunchMission alloc]initWithDictionary:[responseArray firstObject]];
             if ([self->_delegate respondsToSelector:@selector(updateLaunchedDetail:)]) {
                 [self->_delegate updateLaunchedDetail:mission];
             }

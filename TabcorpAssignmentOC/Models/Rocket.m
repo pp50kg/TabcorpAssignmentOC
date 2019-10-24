@@ -19,6 +19,7 @@
     _company = tempDic[@"company"];
     _rocketID = tempDic[@"rocket_id"];
     _rocketType = tempDic[@"rocket_type"];
+    _imageUrl = [tempDic[@"flickr_images"] firstObject];
     _wikipedia = tempDic[@"wikipedia"];
     
     return self;

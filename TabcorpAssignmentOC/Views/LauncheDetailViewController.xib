@@ -46,9 +46,13 @@
                         <constraint firstItem="f2B-3Q-tb6" firstAttribute="centerY" secondItem="jb6-EX-NdS" secondAttribute="centerY" id="bWm-mY-Pw6"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9L-5b-wpb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9L-5b-wpb">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5Hw-a1-HEG"/>
+                        <outlet property="delegate" destination="-1" id="KDH-1F-RLC"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

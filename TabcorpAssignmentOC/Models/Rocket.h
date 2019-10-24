@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSString *wikipedia;//wikipedia
 
+@property (strong, nonatomic) NSString *imageUrl;//flickr_images
+
 @end
 
 NS_ASSUME_NONNULL_END
