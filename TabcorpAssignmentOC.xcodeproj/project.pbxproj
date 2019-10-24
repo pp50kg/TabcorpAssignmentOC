@@ -21,6 +21,7 @@
 		0EAB68F623606576000F243D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB68F523606576000F243D /* Assets.xcassets */; };
 		0EAB68F923606576000F243D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB68F723606576000F243D /* LaunchScreen.storyboard */; };
 		0EAB68FC23606576000F243D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68FB23606576000F243D /* main.m */; };
+		EE2D6DACC82B4ABCB72F58BA /* libPods-TabcorpAssignmentOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D177941AF83BFC7F9F87D068 /* libPods-TabcorpAssignmentOC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,9 @@
 		0EAB68F823606576000F243D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAB68FA23606576000F243D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EAB68FB23606576000F243D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4883EA4369D211DB08C50191 /* Pods-TabcorpAssignmentOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabcorpAssignmentOC.release.xcconfig"; path = "Target Support Files/Pods-TabcorpAssignmentOC/Pods-TabcorpAssignmentOC.release.xcconfig"; sourceTree = "<group>"; };
+		D177941AF83BFC7F9F87D068 /* libPods-TabcorpAssignmentOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TabcorpAssignmentOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A894DA9E9105E7CF08061F /* Pods-TabcorpAssignmentOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabcorpAssignmentOC.debug.xcconfig"; path = "Target Support Files/Pods-TabcorpAssignmentOC/Pods-TabcorpAssignmentOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2D6DACC82B4ABCB72F58BA /* libPods-TabcorpAssignmentOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +72,8 @@
 			children = (
 				0EAB68E823606575000F243D /* TabcorpAssignmentOC */,
 				0EAB68E723606575000F243D /* Products */,
+				10D61FFA5C808D9DDDA236C6 /* Pods */,
+				6EF63B35F69593CD564E1EBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +140,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		10D61FFA5C808D9DDDA236C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8A894DA9E9105E7CF08061F /* Pods-TabcorpAssignmentOC.debug.xcconfig */,
+				4883EA4369D211DB08C50191 /* Pods-TabcorpAssignmentOC.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6EF63B35F69593CD564E1EBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D177941AF83BFC7F9F87D068 /* libPods-TabcorpAssignmentOC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EAB68FF23606576000F243D /* Build configuration list for PBXNativeTarget "TabcorpAssignmentOC" */;
 			buildPhases = (
+				4B0FD1A1AB93F99403E8E069 /* [CP] Check Pods Manifest.lock */,
 				0EAB68E223606575000F243D /* Sources */,
 				0EAB68E323606575000F243D /* Frameworks */,
 				0EAB68E423606575000F243D /* Resources */,
@@ -198,6 +224,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B0FD1A1AB93F99403E8E069 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabcorpAssignmentOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EAB68E223606575000F243D /* Sources */ = {
@@ -351,6 +402,7 @@
 		};
 		0EAB690023606576000F243D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A894DA9E9105E7CF08061F /* Pods-TabcorpAssignmentOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +420,7 @@
 		};
 		0EAB690123606576000F243D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4883EA4369D211DB08C50191 /* Pods-TabcorpAssignmentOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_TabcorpAssignmentOC {
+  umbrella header "Pods-TabcorpAssignmentOC-umbrella.h"
+
+  export *
+  module * { export * }
+}
