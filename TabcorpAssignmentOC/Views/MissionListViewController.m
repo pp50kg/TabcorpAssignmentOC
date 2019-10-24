@@ -8,17 +8,35 @@
 
 #import "MissionListViewController.h"
 #import "MissionListPresenter.h"
+#import "MissionListModel.h"
 
-@interface MissionListViewController ()
+@interface MissionListViewController ()<MissionListPresenterDelegate>
 
 @end
 
-@implementation MissionListViewController
+@implementation MissionListViewController{
+    NSMutableArray *missionList;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    MissionListPresenter *presenter = [MissionListPresenter new];
+    [presenter setDelegate:self];
+    [presenter requestMissionList];
+    
     // Do any additional setup after loading the view.
+}
+
+#pragma mark - MissionListPresenterDelegate
+-(void)updateList:(NSMutableArray *)missions{
+    missionList = [NSMutableArray arrayWithArray:missions];
+    NSLog(@"%@",missions);
+    
+}
+
+-(void)failWithAPI{
+    
 }
 
 @end

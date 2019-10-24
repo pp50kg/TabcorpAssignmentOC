@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Mission : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)tempDic;
+
 @property (strong, nonatomic) NSString *flightNumber;
 @property (strong, nonatomic) NSString *launchYear;
 @property (strong, nonatomic) NSString *missionName;

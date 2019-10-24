@@ -21,7 +21,8 @@
             NSArray *responseArray = responseObject;
             NSMutableArray *missionArray = [NSMutableArray new];
             for (NSDictionary *tempDic in responseArray) {
-                NSLog(@"%@",tempDic);
+                Mission *mission = [[Mission alloc]initWithDictionary:tempDic];
+                [missionArray addObject:mission];
             }
             if ([self->_delegate respondsToSelector:@selector(updateList:)]) {
                 [self->_delegate updateList:missionArray];

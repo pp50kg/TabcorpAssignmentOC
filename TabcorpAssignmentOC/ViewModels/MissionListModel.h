@@ -9,12 +9,18 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSInteger, SortType) {
+    SortByDate = 1,
+    SortByName = 2
+};
 
 @interface MissionListModel : NSObject
 
-//- (instancetype)initWithStore:(PersonStore *)store;
+- (instancetype)initWithMissionList:(NSMutableArray *)missionList;
 
+- (NSMutableArray *)sortByType:(SortType)selectedType;
 - (NSString *)viewControllerTitle;
+- (NSString *)sectionTitleInSection:(NSInteger)section;
 - (NSUInteger)numberOfMissionInSection:(NSInteger)section;
 - (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath;
