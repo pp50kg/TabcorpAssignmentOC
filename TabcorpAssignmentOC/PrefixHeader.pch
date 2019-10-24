@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  TabcorpAssignmentOC
+//
+//  Created by YuChen Hsu on 2019/10/24.
+//  Copyright © 2019 Adam Hsu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#define BaseURL @"https://api.spacexdata.com/v3/"
+
+// 宣告單例類別
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)shared;
+
+// 實作單例類別
+#define SINGLETON_FOR_CLASS(className)\
+\
++(className *)shared{ \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}

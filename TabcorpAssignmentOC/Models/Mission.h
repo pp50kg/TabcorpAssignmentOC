@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Mission : NSObject
 
+@property (strong, nonatomic) NSString *flightNumber;
+@property (strong, nonatomic) NSString *launchYear;
+@property (strong, nonatomic) NSString *missionName;
+@property (strong, nonatomic) NSString *launchDate;
+@property (strong, nonatomic) NSString *rocketId;
+
 @end
 
 NS_ASSUME_NONNULL_END

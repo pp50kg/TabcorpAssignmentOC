@@ -10,4 +10,8 @@
 
 @implementation MissionListModel
 
+- (NSString *)viewControllerTitle{
+    return @"List";
+}
+
 @end

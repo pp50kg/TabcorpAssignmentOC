@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MissionListViewController.h
 //  TabcorpAssignmentOC
 //
 //  Created by YuChen Hsu on 2019/10/23.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LauncheListViewController : UIViewController
+@interface MissionListViewController : UIViewController
 
 
 @end

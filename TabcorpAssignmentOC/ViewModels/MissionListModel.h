@@ -12,11 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MissionListModel : NSObject
 
-- (instancetype)initWithStore:(PersonStore *)store;
+//- (instancetype)initWithStore:(PersonStore *)store;
 
-- (NSString *)title;
+- (NSString *)viewControllerTitle;
 - (NSUInteger)numberOfMissionInSection:(NSInteger)section;
-- (NSString *)fullNameAtIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
