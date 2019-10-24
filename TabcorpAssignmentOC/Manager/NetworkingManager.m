@@ -10,7 +10,9 @@
 
 #define SystemNetworkMaxTime 60.0
 
-@implementation NetworkingManager
+@implementation NetworkingManager{
+    UIView *blackLoadingView;
+}
 SINGLETON_FOR_CLASS(NetworkingManager);
 
 - (instancetype)init

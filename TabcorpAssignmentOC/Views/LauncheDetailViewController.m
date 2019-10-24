@@ -19,6 +19,8 @@
     LaunchMission *launchedDetail;
     Rocket *rocketDetail;
     UIImageView *rocketImageView;
+    UIView *blackLoadingView;
+    MissionDetailPresenter *presenter;
 }
 
 - (void)viewDidLoad {
@@ -28,9 +30,8 @@
     
     [viewControllerTitleLabel setText:@"Mission Detail"];
     
-    MissionDetailPresenter *presenter = [MissionDetailPresenter new];
+    presenter = [MissionDetailPresenter new];
     [presenter setDelegate:self];
-    [presenter requestMissionDetailWith:_launchMission.flightNumber];
     [presenter requestRocketDetailWith:_launchMission.rocketId];
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300.0f)];
@@ -43,6 +44,10 @@
     [headerView addSubview:rocketImageView];
     
     tableView.tableHeaderView = headerView;
+    
+    blackLoadingView = [[[NSBundle mainBundle] loadNibNamed:@"BlackLoadingView" owner:self options:nil] objectAtIndex:0];
+    
+    [self.view addSubview:blackLoadingView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -73,6 +78,8 @@
 -(void)updateLaunchedDetail:(LaunchMission *)launchedInfo{
     launchedDetail = launchedInfo;
     [tableView reloadData];
+    
+    [blackLoadingView removeFromSuperview];
 }
 
 -(void)updateRocketDetail:(Rocket *)rocketInfo{
@@ -82,6 +89,8 @@
                  placeholderImage:[UIImage imageNamed:@"noImage.png"]];
     
     [tableView reloadData];
+    
+    [presenter requestMissionDetailWith:_launchMission.flightNumber];
 }
 
 -(void)failWithAPI{

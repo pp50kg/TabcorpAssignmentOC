@@ -12,7 +12,6 @@
 		0E1BC587236084AD00648646 /* Rocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC586236084AD00648646 /* Rocket.m */; };
 		0E1BC59023613E0900648646 /* MissionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC58F23613E0900648646 /* MissionListModel.m */; };
 		0E1BC5972361467900648646 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5962361467900648646 /* NetworkingManager.m */; };
-		0E1BC59A2361468900648646 /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5992361468900648646 /* ResponseParser.m */; };
 		0E1BC59F236150C700648646 /* MissionListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC59E236150C700648646 /* MissionListPresenter.m */; };
 		0EAB32E323616EDD00606BA1 /* LaunchMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32E223616EDD00606BA1 /* LaunchMission.m */; };
 		0EAB32E72361909D00606BA1 /* MissionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32E52361909D00606BA1 /* MissionCell.m */; };
@@ -20,6 +19,7 @@
 		0EAB32ED236197DB00606BA1 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32EB236197DB00606BA1 /* DetailCell.m */; };
 		0EAB32EE236197DB00606BA1 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB32EC236197DB00606BA1 /* DetailCell.xib */; };
 		0EAB32FB2361CFAE00606BA1 /* MissionDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32FA2361CFAE00606BA1 /* MissionDetailPresenter.m */; };
+		0EAB32FD2361F82100606BA1 /* BlackLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB32FC2361F82100606BA1 /* BlackLoadingView.xib */; };
 		0EAB68EB23606575000F243D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68EA23606575000F243D /* AppDelegate.m */; };
 		0EAB68EE23606575000F243D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68ED23606575000F243D /* SceneDelegate.m */; };
 		0EAB68F123606575000F243D /* MissionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68F023606575000F243D /* MissionListViewController.m */; };
@@ -40,8 +40,6 @@
 		0E1BC58F23613E0900648646 /* MissionListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionListModel.m; sourceTree = "<group>"; };
 		0E1BC5952361467900648646 /* NetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
 		0E1BC5962361467900648646 /* NetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManager.m; sourceTree = "<group>"; };
-		0E1BC5982361468900648646 /* ResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseParser.h; sourceTree = "<group>"; };
-		0E1BC5992361468900648646 /* ResponseParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseParser.m; sourceTree = "<group>"; };
 		0E1BC59B2361493C00648646 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0E1BC59D236150C700648646 /* MissionListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionListPresenter.h; sourceTree = "<group>"; };
 		0E1BC59E236150C700648646 /* MissionListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionListPresenter.m; sourceTree = "<group>"; };
@@ -55,6 +53,7 @@
 		0EAB32EC236197DB00606BA1 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		0EAB32F92361CFAE00606BA1 /* MissionDetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionDetailPresenter.h; sourceTree = "<group>"; };
 		0EAB32FA2361CFAE00606BA1 /* MissionDetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionDetailPresenter.m; sourceTree = "<group>"; };
+		0EAB32FC2361F82100606BA1 /* BlackLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackLoadingView.xib; sourceTree = "<group>"; };
 		0EAB68E623606575000F243D /* TabcorpAssignmentOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabcorpAssignmentOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAB68E923606575000F243D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EAB68EA23606575000F243D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,8 +88,6 @@
 			children = (
 				0E1BC5952361467900648646 /* NetworkingManager.h */,
 				0E1BC5962361467900648646 /* NetworkingManager.m */,
-				0E1BC5982361468900648646 /* ResponseParser.h */,
-				0E1BC5992361468900648646 /* ResponseParser.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -115,6 +112,7 @@
 				0EAB32EA236197DB00606BA1 /* DetailCell.h */,
 				0EAB32EB236197DB00606BA1 /* DetailCell.m */,
 				0EAB32EC236197DB00606BA1 /* DetailCell.xib */,
+				0EAB32FC2361F82100606BA1 /* BlackLoadingView.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -267,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAB32FD2361F82100606BA1 /* BlackLoadingView.xib in Resources */,
 				0EAB32E82361909D00606BA1 /* MissionCell.xib in Resources */,
 				0EAB68F923606576000F243D /* LaunchScreen.storyboard in Resources */,
 				0EAB32EE236197DB00606BA1 /* DetailCell.xib in Resources */,
@@ -318,7 +317,6 @@
 				0EAB32E323616EDD00606BA1 /* LaunchMission.m in Sources */,
 				0EAB68FC23606576000F243D /* main.m in Sources */,
 				0EAB68EE23606575000F243D /* SceneDelegate.m in Sources */,
-				0E1BC59A2361468900648646 /* ResponseParser.m in Sources */,
 				0E1BC587236084AD00648646 /* Rocket.m in Sources */,
 				0EAB32ED236197DB00606BA1 /* DetailCell.m in Sources */,
 				0E1BC59F236150C700648646 /* MissionListPresenter.m in Sources */,

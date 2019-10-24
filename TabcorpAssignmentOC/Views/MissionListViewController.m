@@ -19,6 +19,7 @@
 @implementation MissionListViewController{
     NSMutableArray *missionList;
     MissionListModel *listModel;
+    UIView *blackLoadingView;
 }
 
 - (void)viewDidLoad {
@@ -31,6 +32,9 @@
     [presenter setDelegate:self];
     [presenter requestMissionList];
     
+    blackLoadingView = [[[NSBundle mainBundle] loadNibNamed:@"BlackLoadingView" owner:self options:nil] objectAtIndex:0];
+    
+    [self.view addSubview:blackLoadingView];
     // Do any additional setup after loading the view.
 }
 
@@ -60,6 +64,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LauncheDetailViewController *detailViewController = [LauncheDetailViewController new];
+    [detailViewController setModalPresentationStyle:UIModalPresentationFullScreen];
     [detailViewController setLaunchMission:[listModel selectedMissionAtIndexPath:indexPath]];
     [self presentViewController:detailViewController animated:YES completion:nil];
 }
@@ -71,10 +76,12 @@
     NSMutableArray *resultList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByDate processArray:missionList]];
     listModel.resultList = resultList;
     [tableView reloadData];
+    
+    [blackLoadingView removeFromSuperview];
 }
 
 -(void)failWithAPI{
-    
+    [blackLoadingView removeFromSuperview];
 }
 
 #pragma mark - Action
