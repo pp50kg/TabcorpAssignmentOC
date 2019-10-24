@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E1BC57A2360827300648646 /* LauncheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5782360827300648646 /* LauncheDetailViewController.m */; };
 		0E1BC57B2360827300648646 /* LauncheDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BC5792360827300648646 /* LauncheDetailViewController.xib */; };
-		0E1BC5842360849C00648646 /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5832360849C00648646 /* Mission.m */; };
 		0E1BC587236084AD00648646 /* Rocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC586236084AD00648646 /* Rocket.m */; };
 		0E1BC58D23608B7900648646 /* Launched.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC58C23608B7900648646 /* Launched.m */; };
 		0E1BC59023613E0900648646 /* MissionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC58F23613E0900648646 /* MissionListModel.m */; };
@@ -17,6 +16,7 @@
 		0E1BC5972361467900648646 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5962361467900648646 /* NetworkingManager.m */; };
 		0E1BC59A2361468900648646 /* ResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC5992361468900648646 /* ResponseParser.m */; };
 		0E1BC59F236150C700648646 /* MissionListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BC59E236150C700648646 /* MissionListPresenter.m */; };
+		0EAB32E323616EDD00606BA1 /* LaunchMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB32E223616EDD00606BA1 /* LaunchMission.m */; };
 		0EAB68EB23606575000F243D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68EA23606575000F243D /* AppDelegate.m */; };
 		0EAB68EE23606575000F243D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68ED23606575000F243D /* SceneDelegate.m */; };
 		0EAB68F123606575000F243D /* MissionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB68F023606575000F243D /* MissionListViewController.m */; };
@@ -31,8 +31,6 @@
 		0E1BC5772360827300648646 /* LauncheDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncheDetailViewController.h; sourceTree = "<group>"; };
 		0E1BC5782360827300648646 /* LauncheDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LauncheDetailViewController.m; sourceTree = "<group>"; };
 		0E1BC5792360827300648646 /* LauncheDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LauncheDetailViewController.xib; sourceTree = "<group>"; };
-		0E1BC5822360849C00648646 /* Mission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mission.h; sourceTree = "<group>"; };
-		0E1BC5832360849C00648646 /* Mission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mission.m; sourceTree = "<group>"; };
 		0E1BC585236084AD00648646 /* Rocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rocket.h; sourceTree = "<group>"; };
 		0E1BC586236084AD00648646 /* Rocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rocket.m; sourceTree = "<group>"; };
 		0E1BC58B23608B7900648646 /* Launched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Launched.h; sourceTree = "<group>"; };
@@ -48,6 +46,8 @@
 		0E1BC59B2361493C00648646 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0E1BC59D236150C700648646 /* MissionListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionListPresenter.h; sourceTree = "<group>"; };
 		0E1BC59E236150C700648646 /* MissionListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionListPresenter.m; sourceTree = "<group>"; };
+		0EAB32E123616EDD00606BA1 /* LaunchMission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchMission.h; sourceTree = "<group>"; };
+		0EAB32E223616EDD00606BA1 /* LaunchMission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchMission.m; sourceTree = "<group>"; };
 		0EAB68E623606575000F243D /* TabcorpAssignmentOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabcorpAssignmentOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAB68E923606575000F243D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EAB68EA23606575000F243D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -163,12 +163,12 @@
 		0EAB690423607C77000F243D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0E1BC5822360849C00648646 /* Mission.h */,
-				0E1BC5832360849C00648646 /* Mission.m */,
 				0E1BC585236084AD00648646 /* Rocket.h */,
 				0E1BC586236084AD00648646 /* Rocket.m */,
 				0E1BC58B23608B7900648646 /* Launched.h */,
 				0E1BC58C23608B7900648646 /* Launched.m */,
+				0EAB32E123616EDD00606BA1 /* LaunchMission.h */,
+				0EAB32E223616EDD00606BA1 /* LaunchMission.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,11 +292,11 @@
 				0E1BC5972361467900648646 /* NetworkingManager.m in Sources */,
 				0E1BC59023613E0900648646 /* MissionListModel.m in Sources */,
 				0E1BC57A2360827300648646 /* LauncheDetailViewController.m in Sources */,
+				0EAB32E323616EDD00606BA1 /* LaunchMission.m in Sources */,
 				0EAB68FC23606576000F243D /* main.m in Sources */,
 				0EAB68EE23606575000F243D /* SceneDelegate.m in Sources */,
 				0E1BC59A2361468900648646 /* ResponseParser.m in Sources */,
 				0E1BC587236084AD00648646 /* Rocket.m in Sources */,
-				0E1BC5842360849C00648646 /* Mission.m in Sources */,
 				0E1BC59323613E1A00648646 /* MissionDetailModel.m in Sources */,
 				0E1BC58D23608B7900648646 /* Launched.m in Sources */,
 				0E1BC59F236150C700648646 /* MissionListPresenter.m in Sources */,

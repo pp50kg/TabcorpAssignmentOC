@@ -30,8 +30,9 @@
 
 #pragma mark - MissionListPresenterDelegate
 -(void)updateList:(NSMutableArray *)missions{
-    missionList = [NSMutableArray arrayWithArray:missions];
-    NSLog(@"%@",missions);
+    MissionListModel *listModel = [[MissionListModel alloc] initWithMissionList:missions];
+//    missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByDate]];
+    missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByName]];
     
 }
 

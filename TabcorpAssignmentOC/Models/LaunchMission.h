@@ -1,8 +1,8 @@
 //
-//  Mission.h
+//  LaunchMission.h
 //  TabcorpAssignmentOC
 //
-//  Created by YuChen Hsu on 2019/10/23.
+//  Created by YuChen Hsu on 2019/10/24.
 //  Copyright © 2019 Adam Hsu. All rights reserved.
 //
 
@@ -10,10 +10,9 @@
 
 #import "Rocket.h"
 #import "Launched.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Mission : NSObject
+@interface LaunchMission : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)tempDic;
 
@@ -21,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *launchYear;
 @property (strong, nonatomic) NSString *missionName;
 @property (strong, nonatomic) NSString *launchDate;
+@property (strong, nonatomic) NSString *launchUnix;
 @property (strong, nonatomic) NSString *rocketId;
 
 @end

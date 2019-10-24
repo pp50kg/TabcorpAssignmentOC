@@ -8,7 +8,7 @@
 
 #import "MissionListPresenter.h"
 #import "NetworkingManager.h"
-#import "Mission.h"
+#import "LaunchMission.h"
 
 @implementation MissionListPresenter
 
@@ -21,7 +21,7 @@
             NSArray *responseArray = responseObject;
             NSMutableArray *missionArray = [NSMutableArray new];
             for (NSDictionary *tempDic in responseArray) {
-                Mission *mission = [[Mission alloc]initWithDictionary:tempDic];
+                LaunchMission *mission = [[LaunchMission alloc]initWithDictionary:tempDic];
                 [missionArray addObject:mission];
             }
             if ([self->_delegate respondsToSelector:@selector(updateList:)]) {

@@ -1,14 +1,14 @@
 //
-//  Mission.m
+//  LaunchMission.m
 //  TabcorpAssignmentOC
 //
-//  Created by YuChen Hsu on 2019/10/23.
+//  Created by YuChen Hsu on 2019/10/24.
 //  Copyright © 2019 Adam Hsu. All rights reserved.
 //
 
-#import "Mission.h"
+#import "LaunchMission.h"
 
-@implementation Mission
+@implementation LaunchMission
 
 #pragma mark - Lifecycle
 
@@ -20,6 +20,7 @@
     _missionName = tempDic[@"mission_name"];
     _launchYear = tempDic[@"launch_year"];
     _launchDate = tempDic[@"launch_date_utc"];
+    _launchUnix = tempDic[@"launch_date_unix"];
     NSDictionary *rocketInfo = tempDic[@"rocket"];
     _rocketId = rocketInfo[@"rocket_id"];
 
