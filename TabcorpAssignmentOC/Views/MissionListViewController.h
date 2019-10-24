@@ -10,7 +10,6 @@
 
 @interface MissionListViewController : UIViewController{
     __weak IBOutlet UITableView *tableView;
-    
 }
 
 

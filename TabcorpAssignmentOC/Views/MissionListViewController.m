@@ -55,14 +55,30 @@
 #pragma mark - MissionListPresenterDelegate
 -(void)updateList:(NSMutableArray *)missions{
     listModel = [[MissionListModel alloc] initWithMissionList:missions];
-//    missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByDate]];
-        missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByName]];
+    missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByDate]];
     listModel.sortList = missionList;
     [tableView reloadData];
 }
 
 -(void)failWithAPI{
     
+}
+- (IBAction)selectedSortAction:(id)sender {
+    UISegmentedControl *segment = (UISegmentedControl *)sender;
+    switch (segment.selectedSegmentIndex) {
+        case 0:{//Sort By Date
+        missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByDate]];
+    }
+            break;
+        case 1:{//Sort By Name
+        missionList = [NSMutableArray arrayWithArray:[listModel sortByType:SortByName]];
+    }
+            break;
+        default:
+            break;
+    }
+    listModel.sortList = missionList;
+    [tableView reloadData];
 }
 
 @end

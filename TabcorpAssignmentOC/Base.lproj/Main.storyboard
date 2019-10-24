@@ -16,20 +16,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="egH-T5-Bp2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="787"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="d45-0X-32c"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="c5A-TV-tqw"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k1e-43-18f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="32"/>
+                                <segments>
+                                    <segment title="SortByDate"/>
+                                    <segment title="SortByName"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectedSortAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="PYk-wo-oqn"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="egH-T5-Bp2" firstAttribute="top" secondItem="k1e-43-18f" secondAttribute="bottom" id="0Lu-al-mny"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="egH-T5-Bp2" secondAttribute="bottom" id="0n1-th-IqI"/>
                             <constraint firstItem="egH-T5-Bp2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ar0-iA-g4E"/>
-                            <constraint firstItem="egH-T5-Bp2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kt8-aV-tWB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egH-T5-Bp2" secondAttribute="trailing" id="Z6G-3l-XeF"/>
+                            <constraint firstItem="k1e-43-18f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bLR-pK-9Ei"/>
+                            <constraint firstItem="k1e-43-18f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q24-cW-XRT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k1e-43-18f" secondAttribute="trailing" id="r00-i8-iCD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="77"/>
+            <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
         </scene>
     </scenes>
 </document>
