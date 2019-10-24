@@ -18,9 +18,12 @@ typedef NS_ENUM(NSInteger, SortType) {
 
 - (instancetype)initWithMissionList:(NSMutableArray *)missionList;
 
+@property (strong, nonatomic) NSMutableArray *sortList;
+
 - (NSMutableArray *)sortByType:(SortType)selectedType;
 - (NSString *)viewControllerTitle;
 - (NSString *)sectionTitleInSection:(NSInteger)section;
+- (NSUInteger)numberSection;
 - (NSUInteger)numberOfMissionInSection:(NSInteger)section;
 - (NSString *)titleAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)subTitleAtIndexPath:(NSIndexPath *)indexPath;

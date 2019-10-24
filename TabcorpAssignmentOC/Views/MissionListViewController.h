@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MissionListViewController : UIViewController
+@interface MissionListViewController : UIViewController{
+    __weak IBOutlet UITableView *tableView;
+    
+}
 
 
 @end
